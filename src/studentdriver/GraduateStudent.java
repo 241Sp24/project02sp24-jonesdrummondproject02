@@ -25,16 +25,23 @@ public class GraduateStudent extends StudentFees {
         super(studentName, studentID, isEnrolled);
     }
 
-    @Override
+    public boolean isIsGraduateAssistant() {
+        return isGraduateAssistant;
+    }
+
+    public int getCoursesEnrolled() {
+        return coursesEnrolled;
+    }
+
     void getPayableAmount() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+
+    }
+
+    public String toString() {
+        return ";";
     }
 
     /**
      * @return the coursesEnrolled
      */
-    public int getCoursesEnrolled() {
-        return coursesEnrolled;
-    }
-
 }
