@@ -38,7 +38,7 @@ public class GraduateStudent extends StudentFees {
     }
 
     public String toString() {
-        return ";";
+        return super.toString() + String.format("Graduate Assistant: %-5", +"\ngraduateAssi"
     }
 
 }
