@@ -25,7 +25,14 @@ public class UGStudent extends StudentFees {
 
     @Override
     double getPayableAmount() {
-
+        if (super.isIsEnrolled()) {
+            if (!hasSchaolarship) {
+                scholarshipAmount = 0;
+            }
+            return coursesEnrolled * super.getCREDITS_PER_COURSE() * super.getPER_CREDIT_FEE() - scholarshipAmount + ADDITIONAL_FEE;
+        } else {
+            return 0;
+        }
     }
 
 }
