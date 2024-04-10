@@ -81,7 +81,7 @@ public abstract class StudentFees {
     abstract double getPayableAmount();
 
     public String toString() {
-        return "Student name: " + studentName + "\nStudent ID: " + studentID + "Enrolled: " + isEnrolled;
+        return "Student name: " + studentName + "\nStudent ID: " + studentID + "\nEnrolled: " + isEnrolled;
     }
 
 }

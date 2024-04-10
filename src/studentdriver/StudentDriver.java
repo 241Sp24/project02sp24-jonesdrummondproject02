@@ -40,33 +40,48 @@ public class StudentDriver {
 //        String line = stuInput.nextLine();
 //        System.out.println(line);
         //Loop to get num og students
-        int count = 0;
+        //int count = 0;
         int UgStus = 0;
         int GStus = 0;
         int OStus = 0;
 
         for (int i = 0; i < students.length; i++) {
-            System.out.println("**********Undergraduate students list**********");
+            if (UgStus == 0) {
+                System.out.println("**********Undergraduate students list**********");
+            }
             while (UgStus < numOfUGStu) {
                 String line = stuInput.nextLine();
-                System.out.println(line);
+                String[] stuArr = line.split(",");
+                for (int s = 0; s < stuArr.length; s++) {
+                    students[s] = new UGStudent(stuArr[1], Integer.parseInt(stuArr[0]), Boolean.parseBoolean(stuArr[2]), Boolean.parseBoolean(stuArr[4]), Double.parseDouble(stuArr[5]), Integer.parseInt(stuArr[3]));
+                    System.out.println(students[s]);
+                }
+
                 UgStus++;
             }
 
-//            System.out.println("\n**********Undergraduate students list**********");
-//
-//            while (GStus < numOfGStu) {
-//                String line = stuInput.nextLine();
-//                System.out.println(line);
-//                UgStus++;
-//            }
-//
-//            System.out.println("**********Undergraduate students list**********");
-//            while (OStus < numOfOStu) {
-//                String line = stuInput.nextLine();
-//                System.out.println(line);
-//                UgStus++;
-//            }
+            if (GStus == 0) {
+                System.out.println("**********Graduate students list**********");
+            }
+            while (GStus < numOfGStu) {
+                String line = stuInput.nextLine();
+                String[] stuArr = line.split(",");
+                for (int s = 0; s < stuArr.length; s++) {
+                    students[s] = new GraduateStudent(stuArr[1], Integer.parseInt(stuArr[0]), Boolean.parseBoolean(stuArr[2]), Boolean.parseBoolean(stuArr[4]), stuArr[5], Integer.parseInt(stuArr[3]));
+                    System.out.println(students[s]);
+                }
+
+                GStus++;
+            }
+
+            if (OStus == 0) {
+                System.out.println("**********Online students list**********");
+            }
+            while (OStus < numOfOStu) {
+                String line = stuInput.nextLine();
+                System.out.println(line);
+                OStus++;
+            }
         }
 
         input.close();

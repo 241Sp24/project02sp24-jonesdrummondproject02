@@ -23,7 +23,7 @@ public class OnlineStudent extends StudentFees {
     }
 
     public String toString() {
-        return super.toString() + String.format("No of months: %-5" + "payable amount: %-7.2f", noOfMonths, getPayableAmount());
+        return super.toString() + "No of months: " + noOfMonths + "payable amount: " + getPayableAmount();
     }
 
 }
