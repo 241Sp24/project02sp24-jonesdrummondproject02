@@ -35,6 +35,7 @@ public class GraduateStudent extends StudentFees {
 
     @Override
     double getPayableAmount() {
+
         if (super.isIsEnrolled()) {
             double tuition = coursesEnrolled * super.getCREDITS_PER_COURSE() * super.getPER_CREDIT_FEE();
             if(isGraduateAssistant){
@@ -52,14 +53,11 @@ public class GraduateStudent extends StudentFees {
         else{
             return 0;
         }
-        
+
     }
 
     public String toString() {
-        return ";";
+        return super.toString() + String.format("Graduate Assistant: %-5", +"\ngraduateAssi");
     }
 
-    /**
-     * @return the coursesEnrolled
-     */
 }

@@ -22,6 +22,8 @@ public class OnlineStudent extends StudentFees {
     }
 
     double getPayableAmount() {
+        return MONTHLY_FEE * noOfMonths;
+
     }
 
 }
