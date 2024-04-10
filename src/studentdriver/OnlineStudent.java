@@ -21,7 +21,7 @@ public class OnlineStudent extends StudentFees {
         return ";";
     }
 
-    void getPayableAmount() {
+    double getPayableAmount() {
     }
 
 }

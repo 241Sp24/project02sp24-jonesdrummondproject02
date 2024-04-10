@@ -78,7 +78,7 @@ public abstract class StudentFees {
         return PER_CREDIT_FEE;
     }
 
-    abstract void getPayableAmount();
+    abstract double getPayableAmount();
 
     public String toString() {
         return "Student name: " + studentName + "\nStudent ID: " + studentID + "Enrolled: " + isEnrolled;

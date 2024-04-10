@@ -24,7 +24,7 @@ public class UGStudent extends StudentFees {
     }
 
     @Override
-    void getPayableAmount() {
+    double getPayableAmount() {
 
     }
 

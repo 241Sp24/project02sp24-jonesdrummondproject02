@@ -33,7 +33,7 @@ public class GraduateStudent extends StudentFees {
         return coursesEnrolled;
     }
 
-    void getPayableAmount() {
+    double getPayableAmount() {
 
     }
 
