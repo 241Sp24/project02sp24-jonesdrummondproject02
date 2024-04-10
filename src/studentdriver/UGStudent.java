@@ -34,4 +34,9 @@ public class UGStudent extends StudentFees {
             return 0;
         }
     }
+
+    public String toString() {
+        return super.toString() + String.format(", Has scholarship: %-5" + "\nScholarship amount: " + "%-4s, courses enrolled: %1d, payable amount: %-7.2f", hasScholarship, scholarshipAmount, getPayableAmount());
+    }
+
 }

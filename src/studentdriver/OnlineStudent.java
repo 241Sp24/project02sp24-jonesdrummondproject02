@@ -17,13 +17,13 @@ public class OnlineStudent extends StudentFees {
         super(studentName, studentID, isEnrolled);
     }
 
-    public String toString() {
-        return ";";
-    }
-
     double getPayableAmount() {
         return MONTHLY_FEE * noOfMonths;
 
+    }
+
+    public String toString() {
+        return super.toString() + String.format("No of months: %-5" + "payable amount: %-7.2f", noOfMonths, getPayableAmount());
     }
 
 }
