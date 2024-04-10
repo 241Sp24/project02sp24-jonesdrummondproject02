@@ -34,6 +34,7 @@ public class GraduateStudent extends StudentFees {
     }
 
     double getPayableAmount() {
+        return 0;
 
     }
 
